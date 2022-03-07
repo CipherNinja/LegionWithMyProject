@@ -9,7 +9,7 @@ GUYS FOLLOW MY INSTRUCTIONS TO DOWNLOAD AND USE MY CODES
 sudo apt-get update 
 sudo apt-get upgrade
 sudo apt-get install git -y
-git clone https://github.com/CipherNinja/LegionWithMyProject/blob/main/fahrenhite.py
+git clone https://github.com/CipherNinja/LegionWithMyProject
 chmod 777 fahrenhite.py
 python3 fahrenhite.py
 ##-------FOR TERMUX USERS------#
