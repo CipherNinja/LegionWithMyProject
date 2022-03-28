@@ -16,7 +16,7 @@ class calculator:
 			print('\n THANKS FOR CHOSING US ')
 
 try:
-	vid = calculator([23,3],[23,4],[320],[32])
+	vid = calculator([22,33],[43.423],[122,123],[123,123])
 	hey = vid.ADDITON_SUBTRACTION()
 	print(hey)
 except Exception as e:
@@ -55,3 +55,45 @@ except Exception as e:
 	print('\n You got this error : ')
 else:
 	print('\nWORKING')
+
+import math as c
+class square_root_and_powers:
+	try:
+		def __init__(self,demand,arg,arg2,raised):
+			self.demand = demand
+			self.arg = c.sqrt(arg)  #--------demanding integer is 1
+			self.arg2 = c.pow(arg2,raised) #---------demanding integer is 2
+		def engine(self):
+			if self.demand == 1:
+				return self.arg ,' root'
+			elif self.demand == 2:
+				return self.arg2 , ' power'
+			else:
+				print('seems like a wrong input is GIVEN')
+	except Exception as e:
+		print('\n CHECK IF YOU HAVE GIVEN WRONG input ALWAYS USE INTEGER : ')
+		print('\n Your error is ', e)
+	else:
+		print('THANKS FOR USING THIS PROGRAMME')
+
+try:
+	print('program to find square_root_and_powers ')
+	i_want = int(input('\n ENTER 1 FOR SQUARE_ROOT AND 2 FOR POWER'))
+	value = int(input('\n WHAT IS YOUR VALUE '))
+	power = int(input('\n HOW MUCH IS THE POWER FOR YOUR VALUE'))
+	if i_want == 1:
+		key = square_root_and_powers(1,value,0,0)
+		word = key.engine()
+		print(word)
+	elif i_want == 2:
+		key = square_root_and_powers(2,0,value,power)
+		word = key.engine()
+		print(word)
+
+except Exception as e:
+	print('\n YOU GOT ERROR IN INPUT METHOD CHECK :')
+	print(e)
+else:
+	if  i_want > 2 or i_want < 1:
+		print('PLEASE CHOSE A VALUE BTW 1 AND 2 ONLY ')
+		
