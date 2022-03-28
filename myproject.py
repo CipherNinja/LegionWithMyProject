@@ -78,14 +78,14 @@ class square_root_and_powers:
 
 try:
 	print('program to find square_root_and_powers ')
-	i_want = int(input('\n ENTER 1 FOR SQUARE_ROOT AND 2 FOR POWER'))
-	value = int(input('\n WHAT IS YOUR VALUE '))
-	power = int(input('\n HOW MUCH IS THE POWER FOR YOUR VALUE'))
+	i_want = int(input('\n ENTER 1 FOR SQUARE_ROOT AND 2 FOR POWER : '))
+	value = int(input('\n WHAT IS YOUR VALUE : '))
 	if i_want == 1:
 		key = square_root_and_powers(1,value,0,0)
 		word = key.engine()
 		print(word)
 	elif i_want == 2:
+		power = int(input('\n HOW MUCH IS THE POWER FOR YOUR VALUE : '))
 		key = square_root_and_powers(2,0,value,power)
 		word = key.engine()
 		print(word)
@@ -96,4 +96,4 @@ except Exception as e:
 else:
 	if  i_want > 2 or i_want < 1:
 		print('PLEASE CHOSE A VALUE BTW 1 AND 2 ONLY ')
-		
+
