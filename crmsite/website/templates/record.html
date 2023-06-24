@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-mid-3 offset-md-2">
+
+    <h1>📶📶📶 Customer Records 📶📶📶</h1>
+<br><br>
+
+<div class="card col-md-6 offset-md-1">
+    <div class="card-header">
+        <strong>
+            {{ customer_record.firstname }}
+            {{ customer_record.lastname  }}
+        </strong>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            <strong>Email : </strong>{{ customer_record.email }}
+        </p>
+        <p class="card-text">
+            <strong>Phone : </strong>{{ customer_record.phone }}
+        </p>
+        <p class="card-text">
+            <strong>Address : </strong>{{ customer_record.address }}
+        </p>
+        <p class="card-text">
+            <strong>City : </strong>{{ customer_record.city }}
+        </p>
+        <p class="card-text">
+            <strong>Zipcode : </strong>{{ customer_record.zipcode }}
+        </p>
+        <p class="card-text">
+            <strong>Created at : </strong>{{ customer_record.created_at }}
+        </p>
+        <p class="card-text">
+            <strong>Id : </strong>{{ customer_record.id }}
+        </p>
+    </div>
+    <div class="col-mid-2 offset-md-1">
+        <a href="{% url 'home' %} " class= "btn btn-secondary">Back</a>
+        <a href="{% url 'delete_record' customer_record.id %} " class= "btn btn-danger">Delete</a>
+
+    </div>
+
+</div>
+
+
+</div>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Django CRM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+
+              {% if user.is_authenticated %}
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'add_record' %}">Add record</a>
+              </li>
+<!-- LOGOUT -->
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">logout</a>
+              </li>
+              {% else %}
+<!-- LOGIN -->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">login</a>
+              </li>
+<!-- REGISTRATION -->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">register</a>
+              </li>
+              {% endif %}
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</body>
+</html> 
